@@ -1,0 +1,11 @@
+#!/bin/bash -l
+#SBATCH -D /home/makman/Pellies/trim
+#SBATCH -J Trim4
+#SBATCH -o /home/makman/Pellies/outs/trimmomatic_Pellies_stdout.txt
+#SBATCH -e /home/makman/Pellies/outs/trimmomatic_Pellies_stderr.txt
+#SBATCH --mail-type=All
+#SBATCH --mail-user=makman@ucdavis.edu
+#SBATCH -p hi
+#SBATCH --ntasks=64
+module load java
+java -jar ./trimmomatic-0.33.jar PE -threads 64 /home/makman/Rawdata/Pellies_NYU/combined_forward.fastq /home/makman/Rawdata/Pellies_NYU/combined_reverse.fastq /home/makman/Rawdata/Pellies_NYU/combined_forward_trimmed_paired.fastq /home/makman/Rawdata/Pellies_NYU/combined_forward_trimmed_unpaired.fastq /home/makman/Rawdata/Pellies_NYU/combined_reverse_trimmed_paired.fastq /home/makman/Rawdata/Pellies_NYU/combined_reverse_trimmed_unpaired.fastq ILLUMINACLIP:adapters.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36

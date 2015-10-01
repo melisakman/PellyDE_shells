@@ -1,13 +1,15 @@
 #!/bin/bash -l
-#SBATCH -D /home/makman/ProExp
+#SBATCH -D /home/makman/Pellies/QC
 #SBATCH -J FastQC
-#SBATCH -o /home/makman/ProExp/outs/FastQC_raw_stdout.txt
-#SBATCH -e /home/makman/ProExp/outs/FastQC_raw_stderr.txt
+#SBATCH -o /home/makman/Pellies/outs/FastQC_raw_stdout.txt
+#SBATCH -e /home/makman/Pellies/outs/FastQC_raw_stderr.txt
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@ucdavis.edu
-#SBATCH -p bigmemm
+#SBATCH -p hi
 #SBATCH --ntasks=16
-#SBATCH --array=0-1
+#SBATCH --array=0-3
 module load fastqc
-fastqc /home/makman/ProExp/Rawseq/ALMA4/ALMA4_combined.fastq.gz
-fastqc /home/makman/ProExp/Rawseq/ALMA5/ALMA5_combined.fastq.gz
+fastqc /home/makman/Rawdata/Pellies_NYU/1_NoIndex_L007_R1_001.fastq.gz
+fastqc /home/makman/Rawdata/Pellies_NYU/1_NoIndex_L007_R2_001.fastq.gz
+fastqc /home/makman/Rawdata/Pellies_NYU/ma_1_NoIndex_L001_R1_001.fastq.gz
+fastqc /home/makman/Rawdata/Pellies_NYU/ma_1_NoIndex_L001_R2_001.fastq.gz
