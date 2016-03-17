@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH -D /home/makman/Pellies/Demultiplexed/
 #SBATCH -J sabre
-#SBATCH -o /home/makman/ProExp/outs/demultiplexSabre_Pellies_stdout.txt
-#SBATCH -e /home/makman/ProExp/outs/demultiplexSabre_Pellies_stderr.txt
+#SBATCH -o /home/makman/Pellies/outs/demultiplexSabre_Pellies_stdout.txt
+#SBATCH -e /home/makman/Pellies/outs/demultiplexSabre_Pellies_stderr.txt
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@ucdavis.edu
 #SBATCH -p serial
