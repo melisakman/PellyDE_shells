@@ -8,4 +8,4 @@
 #SBATCH -p serial
 #SBATCH --ntasks=32
 module load sabre
-sabre pe -m 1 -c -f /home/makman/Rawdata/Pellies_NYU/combined_forward_trimmed_paired.fastq -r /home/makman/Rawdata/Pellies_NYU/combined_reverse_trimmed_paired.fastq -b barcodes.sabre.txt -u unknown_barcode1.fastq -w unknown_barcode2.fastq
+sabre pe -m 1 -c -f /home/makman/Rawdata/Pellies_NYU/combined_forward_trimmed_paired.fastq -r /home/makman/Rawdata/Pellies_NYU/combined_reverse_trimmed_paired.fastq -b home/makman/Pellies/Demultiplexed/barcodes.sabre.txt -u unknown_barcode1.fastq -w unknown_barcode2.fastq
