@@ -5,7 +5,7 @@
 #SBATCH -e /home/makman/Pellies/outs/trimmomaticafterdemultiplex_Pellies6_stderr.txt
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@ucdavis.edu
-#SBATCH -p med
+#SBATCH -p serial
 #SBATCH --array=0-9
 #SBATCH --ntasks=16
 module load java

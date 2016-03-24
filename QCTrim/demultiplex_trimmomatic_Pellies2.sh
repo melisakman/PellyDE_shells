@@ -5,7 +5,7 @@
 #SBATCH -e /home/makman/Pellies/outs/trimmomaticafterdemultiplex_Pellies2_stderr.txt
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@ucdavis.edu
-#SBATCH -p hi
+#SBATCH -p serial
 #SBATCH --array=0-9
 module load java
 java -jar ./trimmomatic-0.33.jar PE -threads 64 /home/makman/Pellies/Demultiplexed/notrim/Pelly1_F.fastq /home/makman/Pellies/Demultiplexed/notrim/Pelly1_R.fastq /home/makman/Pellies/Demultiplexed/notrim/Pelly1_F_trimmed_paired.fastq /home/makman/Pellies/Demultiplexed/notrim/Pelly1_F_trimmed_unpaired.fastq /home/makman/Pellies/Demultiplexed/notrim/Pelly1_R_trimmed_paired.fastq /home/makman/Pellies/Demultiplexed/notrim/Pelly1_R_trimmed_unpaired.fastq ILLUMINACLIP:adapters.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 
