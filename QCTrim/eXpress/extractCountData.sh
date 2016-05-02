@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH -D /home/makman/Pellies/eXpress
+#SBATCH -D /home/makman/Pellies/eXpress/
 #SBATCH -J extractcounts
 #SBATCH -o /home/makman/extract counts_stdout.txt
 #SBATCH -e /home/makman/extract counts_stderr.txt
