@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #SBATCH -D /home/makman/Pellies/eXpress/
 #SBATCH -J extractcounts
-#SBATCH -o /home/makman/extractcounts_stdout.txt
-#SBATCH -e /home/makman/extractcounts_stderr.txt
+#SBATCH -o /home/makman/Pellies/outs/extractcounts_stdout.txt
+#SBATCH -e /home/makman/Pellies/outs/extractcounts_stderr.txt
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@ucdavis.edu
 #SBATCH -p serial
