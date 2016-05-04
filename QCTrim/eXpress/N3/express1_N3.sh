@@ -7,7 +7,7 @@
 #SBATCH --mail-user=makman@ucdavis.edu
 #SBATCH -p bigmemh
 #SBATCH --ntasks=16
-#SBATCH --aSrray=0-9
+#SBATCH --array=0-9
 module load express
 module load bowtie
 bowtie -aS -n 3 -X 800 --offrate 1 /home/makman/Pellies/eXpress/bowtie_index/bowtie_index_Pellies -1 /home/makman/Pellies/Demultiplexed/trimmed/paired/Pelly10_F_trimmed_paired.fastq -2 /home/makman/Pellies/Demultiplexed/trimmed/paired/Pelly10_R_trimmed_paired.fastq | express --no-bias-correct -o /home/makman/Pellies/eXpress/Pelly10_N3 /home/makman/Pellies/eXpress/bowtie_index/phr1_elichr.fasta
