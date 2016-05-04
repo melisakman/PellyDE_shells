@@ -6,7 +6,7 @@
 #SBATCH --mail-type=All
 #SBATCH --mail-user=makman@ucdavis.edu
 #SBATCH -p bigmemh
-#SBATCH --ntasks=16
+#SBATCH --ntasks=4
 #SBATCH --array=0-9
 module load express
 module load bowtie
