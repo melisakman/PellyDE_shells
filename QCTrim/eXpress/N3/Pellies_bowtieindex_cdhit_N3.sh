@@ -7,5 +7,5 @@
 #SBATCH --mail-user=makman@ucdavis.edu
 #SBATCH -p bigmemh
 #SBATCH --ntasks=16
-module load bowtie2
+module load bowtie
 bowtie-build --offrate 1 /home/makman/Pellies/eXpress/bowtie_index/phr1_elichr.fasta bowtie_index_Pellies_N3
